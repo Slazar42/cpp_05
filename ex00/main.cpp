@@ -6,7 +6,7 @@
 /*   By: slazar <slazar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 10:52:22 by slazar            #+#    #+#             */
-/*   Updated: 2024/04/26 10:52:23 by slazar           ###   ########.fr       */
+/*   Updated: 2024/10/19 12:59:46 by slazar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,12 @@ int main()
 		std::cout << b << std::endl;
 		Bureaucrat b1("b1", 1);
 		std::cout << b1 << std::endl;
-
-			// Bureaucrat b3("b3", 160);
-			Bureaucrat b2("b2", 0);
+		
+		std::cout <<"name is : " << b.getName()<< std::endl;
+		std::cout << "grade is : " << b.getGrade()<< std::endl;
+		b1.incrementGrade();
+		Bureaucrat b3("b3", 160);
 		}catch (std::exception &e){
-			std::cout << e.what() << std::endl;
+			std::cerr << e.what() << std::endl;
 		}
 }

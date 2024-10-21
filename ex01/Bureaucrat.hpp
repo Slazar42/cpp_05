@@ -6,7 +6,7 @@
 /*   By: slazar <slazar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 10:52:36 by slazar            #+#    #+#             */
-/*   Updated: 2024/04/26 10:52:37 by slazar           ###   ########.fr       */
+/*   Updated: 2024/10/21 11:34:13 by slazar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include <iostream>
 #include <string>
 #include <exception>
+#include "Form.hpp"
 
 
 class Bureaucrat
@@ -33,16 +34,17 @@ public:
 	int getGrade() const;
 	void incrementGrade();
 	void decrementGrade();
-
+	void signForm(Form &form);
+	
 	class GradeTooHighException : public std::exception
 	{
 	public:
-		virtual const char *what() const throw();
+	virtual const char *what() const throw();
 	};
 	class GradeTooLowException : public std::exception
 	{
 	public:
-		virtual const char *what() const throw();
+	virtual const char *what() const throw();
 	};
 };
 

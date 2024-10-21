@@ -6,24 +6,27 @@
 /*   By: slazar <slazar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 10:52:49 by slazar            #+#    #+#             */
-/*   Updated: 2024/04/26 10:52:50 by slazar           ###   ########.fr       */
+/*   Updated: 2024/10/21 11:28:05 by slazar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-#include"Bureaucrat.hpp"
+#include"Form.hpp"
 
 int main()
 {
-	try{
-		Bureaucrat b;
-		std::cout << b << std::endl;
-		Bureaucrat b1("b1", 1);
-		std::cout << b1 << std::endl;
-
-			// Bureaucrat b3("b3", 160);
-			Bureaucrat b2("b2", 0);
-		}catch (std::exception &e){
-			std::cout << e.what() << std::endl;
-		}
+	try
+	{
+		Bureaucrat bureaucrat("bureaucrat", 1);
+		Form form("form", 1, 1);
+		std::cout << bureaucrat << std::endl;
+		std::cout << form << std::endl;
+		bureaucrat.signForm(form);
+		std::cout << form << std::endl;
+	}
+	catch (std::exception &e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
+	return 0;
 }

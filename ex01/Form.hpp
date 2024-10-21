@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   form.hpp                                           :+:      :+:    :+:   */
+/*   Form.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: slazar <slazar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 10:52:06 by slazar            #+#    #+#             */
-/*   Updated: 2024/04/26 10:54:41 by slazar           ###   ########.fr       */
+/*   Updated: 2024/10/20 12:23:35 by slazar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,16 +37,18 @@ public:
 	class GradeTooHighException : public std::exception
 	{
 	public:
-		virtual const char *what() const throw();
+	virtual const char *what() const throw();
 	};
 	class GradeTooLowException : public std::exception
 	{
 	public:
-		virtual const char *what() const throw();
+	virtual const char *what() const throw();
 	};
 	class FormAlreadySignedException : public std::exception
 	{
 	public:
-		virtual const char *what() const throw();
+	virtual const char *what() const throw();
 	};
 };
+
+std::ostream &operator<<(std::ostream &out, Form const &form);

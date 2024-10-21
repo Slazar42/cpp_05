@@ -6,7 +6,7 @@
 /*   By: slazar <slazar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 10:52:28 by slazar            #+#    #+#             */
-/*   Updated: 2024/04/26 10:52:29 by slazar           ###   ########.fr       */
+/*   Updated: 2024/10/21 15:49:02 by slazar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,18 @@ void Bureaucrat::decrementGrade()
 	_grade++;
 }
 
+void Bureaucrat::signForm(Form &form)
+{
+	try
+	{
+		form.beSigned(*this);
+		std::cout << _name << " signed " << form.getName() << std::endl;
+	}
+	catch (std::exception &e)
+	{
+		std::cerr << _name << " couldn't sign " << form.getName() << " because " << e.what() << std::endl;
+	}
+}
 const char *Bureaucrat::GradeTooHighException::what() const throw()
 {
 	return "Grade is too high";
