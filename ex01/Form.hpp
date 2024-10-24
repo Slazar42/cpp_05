@@ -6,13 +6,15 @@
 /*   By: slazar <slazar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 10:52:06 by slazar            #+#    #+#             */
-/*   Updated: 2024/10/20 12:23:35 by slazar           ###   ########.fr       */
+/*   Updated: 2024/10/24 22:54:01 by slazar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 #include "Bureaucrat.hpp"
+
+class Bureaucrat;
 
 class Form
 {

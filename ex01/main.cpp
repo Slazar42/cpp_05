@@ -6,7 +6,7 @@
 /*   By: slazar <slazar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 10:52:49 by slazar            #+#    #+#             */
-/*   Updated: 2024/10/21 11:28:05 by slazar           ###   ########.fr       */
+/*   Updated: 2024/10/24 22:47:26 by slazar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int main()
 	try
 	{
 		Bureaucrat bureaucrat("bureaucrat", 1);
-		Form form("form", 1, 1);
+		Form form("form", 1, 2);
 		std::cout << bureaucrat << std::endl;
 		std::cout << form << std::endl;
 		bureaucrat.signForm(form);
@@ -28,5 +28,4 @@ int main()
 	{
 		std::cerr << e.what() << std::endl;
 	}
-	return 0;
 }

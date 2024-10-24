@@ -6,7 +6,7 @@
 /*   By: slazar <slazar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 10:52:22 by slazar            #+#    #+#             */
-/*   Updated: 2024/10/19 12:59:46 by slazar           ###   ########.fr       */
+/*   Updated: 2024/10/24 22:48:38 by slazar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 
 int main()
 {
-	try{
+	try
+	{
 		Bureaucrat b;
 		std::cout << b << std::endl;
 		Bureaucrat b1("b1", 1);
@@ -25,7 +26,9 @@ int main()
 		std::cout << "grade is : " << b.getGrade()<< std::endl;
 		b1.incrementGrade();
 		Bureaucrat b3("b3", 160);
-		}catch (std::exception &e){
-			std::cerr << e.what() << std::endl;
-		}
+	}
+	catch (std::exception &e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
 }

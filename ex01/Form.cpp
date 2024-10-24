@@ -6,13 +6,13 @@
 /*   By: slazar <slazar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 10:52:43 by slazar            #+#    #+#             */
-/*   Updated: 2024/10/21 12:21:16 by slazar           ###   ########.fr       */
+/*   Updated: 2024/10/24 22:58:33 by slazar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
 
-Form::Form(std::string name, int gradeToSign, int gradeToExecute) : _name(name), _gradeToSign(gradeToSign), _gradeToExecute(gradeToExecute), _signed(false)
+Form::Form(std::string name, int gradeToSign, int gradeToExecute) : _name(name), _signed(false), _gradeToSign(gradeToSign), _gradeToExecute(gradeToExecute)
 {
 	if (gradeToSign < 1 || gradeToExecute < 1)
 		throw Form::GradeTooHighException();
@@ -20,11 +20,11 @@ Form::Form(std::string name, int gradeToSign, int gradeToExecute) : _name(name),
 		throw Form::GradeTooLowException();
 }
 
-Form::Form() : _name("default"), _gradeToSign(1), _gradeToExecute(1), _signed(false)
-{
+Form::Form() : _name("default"), _signed(false), _gradeToSign(1), _gradeToExecute(1)
+{	
 }
 
-Form::Form(Form const &other) : _name(other._name), _gradeToSign(other._gradeToSign), _gradeToExecute(other._gradeToExecute), _signed(other._signed)
+Form::Form(Form const &other) : _name(other._name), _signed(other._signed), _gradeToSign(other._gradeToSign), _gradeToExecute(other._gradeToExecute)
 {
 }
 
@@ -64,6 +64,8 @@ void Form::beSigned(Bureaucrat const &bureaucrat)
 {
 	if (bureaucrat.getGrade() > _gradeToSign)
 		throw Form::GradeTooLowException();
+	else if (bureaucrat.getGrade() < _gradeToSign)
+		throw Form::GradeTooHighException();
 	if (_signed)
 		throw Form::FormAlreadySignedException();
 	_signed = true;
