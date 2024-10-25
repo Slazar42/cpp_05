@@ -6,7 +6,7 @@
 /*   By: slazar <slazar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 23:36:47 by slazar            #+#    #+#             */
-/*   Updated: 2024/10/24 23:50:46 by slazar           ###   ########.fr       */
+/*   Updated: 2024/10/25 20:48:21 by slazar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,7 @@ public:
 	int getGradeToSign() const;
 	int getGradeToExecute() const;
 	void beSigned(Bureaucrat const &bureaucrat);
-	void execute(Bureaucrat const &executor) const;
-
+	virtual void execute(Bureaucrat const &executor) const = 0;
 	class GradeTooHighException : public std::exception
 	{
 	public:
@@ -56,3 +55,5 @@ public:
 	virtual const char *what() const throw();
 	};
 };
+
+std::ostream &operator<<(std::ostream &out, AForm const &aForm);
