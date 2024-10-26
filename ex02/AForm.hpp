@@ -6,7 +6,7 @@
 /*   By: slazar <slazar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 23:36:47 by slazar            #+#    #+#             */
-/*   Updated: 2024/10/25 20:48:21 by slazar           ###   ########.fr       */
+/*   Updated: 2024/10/26 11:23:59 by slazar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,11 @@ public:
 	virtual const char *what() const throw();
 	};
 	class FormAlreadySignedException : public std::exception
+	{
+	public:
+	virtual const char *what() const throw();
+	};
+	class FormNotSignedException : public std::exception
 	{
 	public:
 	virtual const char *what() const throw();
