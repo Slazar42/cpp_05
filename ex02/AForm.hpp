@@ -6,7 +6,7 @@
 /*   By: slazar <slazar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 23:36:47 by slazar            #+#    #+#             */
-/*   Updated: 2024/10/26 11:23:59 by slazar           ###   ########.fr       */
+/*   Updated: 2024/10/26 18:55:29 by slazar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,9 @@ private:
 	bool _signed;
 	int const _gradeToSign;
 	int const _gradeToExecute;
+// protected:
 public:
+	std::string _target;
 	AForm();
 	AForm(std::string name, int gradeToSign, int gradeToExecute);
 	AForm(AForm const &other);

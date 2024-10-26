@@ -6,7 +6,7 @@
 /*   By: slazar <slazar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 12:04:25 by slazar            #+#    #+#             */
-/*   Updated: 2024/10/26 12:05:36 by slazar           ###   ########.fr       */
+/*   Updated: 2024/10/26 18:37:01 by slazar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@
 
 class ShrubberyCreationForm : public AForm
 {
-private:
-	std::string const _target;
 public:
 	ShrubberyCreationForm();
 	ShrubberyCreationForm(std::string target);

@@ -6,7 +6,7 @@
 /*   By: slazar <slazar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 22:02:54 by slazar            #+#    #+#             */
-/*   Updated: 2024/10/25 23:52:38 by slazar           ###   ########.fr       */
+/*   Updated: 2024/10/26 18:36:48 by slazar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@
 
 class PresidentialPardonForm : public AForm
 {
-private:
-	std::string const _target;
 public:
 	PresidentialPardonForm();
 	PresidentialPardonForm(std::string target);

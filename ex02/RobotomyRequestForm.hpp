@@ -6,7 +6,7 @@
 /*   By: slazar <slazar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 11:52:58 by slazar            #+#    #+#             */
-/*   Updated: 2024/10/26 12:04:17 by slazar           ###   ########.fr       */
+/*   Updated: 2024/10/26 18:36:57 by slazar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@
 
 class RobotomyRequestForm : public AForm
 {
-private:
-	std::string const _target;
 public:
 	RobotomyRequestForm();
 	RobotomyRequestForm(std::string target);

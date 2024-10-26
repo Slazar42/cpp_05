@@ -6,7 +6,7 @@
 /*   By: slazar <slazar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 10:52:36 by slazar            #+#    #+#             */
-/*   Updated: 2024/10/25 23:56:18 by slazar           ###   ########.fr       */
+/*   Updated: 2024/10/26 16:41:21 by slazar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ public:
 	void incrementGrade();
 	void decrementGrade();
 	void signForm(AForm &form);
+	void executeForm(AForm const &form);
 	
 	class GradeTooHighException : public std::exception
 	{
